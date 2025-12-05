@@ -47,8 +47,8 @@ def execute():
         "sub": lambda x, y: x - y,
         "mul": lambda x, y: x * y
     }
-    print("Add using dict lambda:", operations"add")
-    print("Mul using dict lambda:", operations"mul")
+    print("Add using dict lambda:", operations["add"](2, 3))
+    print("Mul using dict lambda:", operations["mul"](4, 5))
 
     print("\n=== LAMBDA WITH SORTING BY STRING LENGTH ===")
     words = ["apple", "banana", "kiwi"]
