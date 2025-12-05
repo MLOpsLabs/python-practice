@@ -41,17 +41,14 @@ try:
     img_label.pack(pady=(10, 15))
 except:
     # If logo not found, show text instead
-    logo_label = Label(frame, text="YUKTIIO", font=("Helvetica", 24, "bold"), 
-                       fg=PRIMARY_COLOR, bg=BG_COLOR)
+    logo_label = Label(frame, text="YUKTIIO", font=("Helvetica", 24, "bold"), fg=PRIMARY_COLOR, bg=BG_COLOR)
     logo_label.pack(pady=(10, 15))
 
 # Welcome Text
-welcome_label = Label(frame, text="Welcome Back", 
-                      font=("Helvetica", 22, "bold"), fg=TEXT_COLOR, bg=BG_COLOR)
+welcome_label = Label(frame, text="Welcome Back", font=("Helvetica", 22, "bold"), fg=TEXT_COLOR, bg=BG_COLOR)
 welcome_label.pack(pady=(0, 5))
 
-subtitle_label = Label(frame, text="Sign in to your account", 
-                       font=("Helvetica", 12), fg="#64748b", bg=BG_COLOR)
+subtitle_label = Label(frame, text="Sign in to your account", font=("Helvetica", 12), fg="#64748b", bg=BG_COLOR)
 subtitle_label.pack(pady=(0, 30))
 
 # Input Frame
@@ -91,16 +88,13 @@ email_input.bind("<FocusOut>", on_email_leave)
 password_frame = Frame(input_frame, bg=BG_COLOR)
 password_frame.pack(fill="x", pady=(0, 10))
 
-password_label = Label(password_frame, text="Password", font=("Helvetica", 11), 
-                       fg=TEXT_COLOR, bg=BG_COLOR)
+password_label = Label(password_frame, text="Password", font=("Helvetica", 11), fg=TEXT_COLOR, bg=BG_COLOR)
 password_label.pack(anchor="w")
 
 password_input_container = Frame(password_frame, bg=BG_COLOR)
 password_input_container.pack(fill="x", pady=(5, 0))
 
-password_input = Entry(password_input_container, font=("Helvetica", 12), width=29, 
-                       show="•", relief="flat", bd=2, bg=ENTRY_BG, highlightthickness=1,
-                       highlightbackground="#cbd5e1", highlightcolor=PRIMARY_COLOR)
+password_input = Entry(password_input_container, font=("Helvetica", 12), width=29, show="•", relief="flat", bd=2, bg=ENTRY_BG, highlightthickness=1, highlightbackground="#cbd5e1", highlightcolor=PRIMARY_COLOR)
 password_input.pack(side=LEFT, ipady=8)
 password_input.bind("<FocusIn>", lambda e: password_input.config(highlightbackground=PRIMARY_COLOR))
 password_input.bind("<FocusOut>", lambda e: password_input.config(highlightbackground="#cbd5e1"))
@@ -133,8 +127,7 @@ remember_check.pack(side=LEFT)
 
 # Forgot Password
 def on_forgot_password():
-    messagebox.showinfo("Forgot Password", 
-                       "Please contact your administrator\nor check your email for password reset instructions.")
+    messagebox.showinfo("Forgot Password", "Please contact your administrator\nor check your email for password reset instructions.")
 
 forgot_btn = Button(options_frame, text="Forgot password?", 
                     font=("Helvetica", 10), bg=BG_COLOR, fg=PRIMARY_COLOR, 
@@ -189,9 +182,9 @@ def on_leave(e):
     login_button.config(bg=PRIMARY_COLOR)
 
 login_button = Button(frame, text="Login", font=("Helvetica", 12, "bold"), 
-                      bg=PRIMARY_COLOR, fg="#ffffff", width=28, 
-                      cursor="hand2", relief="flat", bd=0,
-                      activebackground=SECONDARY_COLOR, command=validate_login)
+                    bg=PRIMARY_COLOR, fg="#ffffff", width=28, 
+                    cursor="hand2", relief="flat", bd=0,
+                    activebackground=SECONDARY_COLOR, command=validate_login)
 login_button.pack(pady=(10, 20), ipady=12)
 login_button.bind("<Enter>", on_enter)
 login_button.bind("<Leave>", on_leave)
@@ -205,7 +198,7 @@ footer_frame = Frame(frame, bg=BG_COLOR)
 footer_frame.pack()
 
 footer_label = Label(footer_frame, text="Don't have an account? ", 
-                     font=("Helvetica", 10), fg="#64748b", bg=BG_COLOR)
+                    font=("Helvetica", 10), fg="#64748b", bg=BG_COLOR)
 footer_label.pack(side=LEFT)
 
 def on_signup():
